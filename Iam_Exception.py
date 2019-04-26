@@ -1,0 +1,3 @@
+class Iam_Exception(Exception):
+    def __init__(self, message):
+        self.message = message
