@@ -2,7 +2,7 @@ import os,git,logging,shutil,stat
 from botocore.exceptions import ClientError
 
 logging.basicConfig(filename='./aws_automation_logger.log',level=logging.FATAL,filemode='a+',format='%(name)s - %(timestamp)s - %(levelname)s - %(message)s')
-os.environ['properties_file'] = os.path.asbpath('..\\..\\..\\resources\\config.properties')
+os.environ['properties_file'] = os.path.abspath('..\\..\\..\\resources\\config.properties')
 
 class Env_Exception(Exception):
     def __init__(self,message):
